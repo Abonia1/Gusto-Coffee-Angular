@@ -1,27 +1,40 @@
 <form>
 
+  <mat-card>
     <mat-form-field>
       <input matInput placeholder="Coffee Name"
              name="name" [(ngModel)]="coffee.name">
     </mat-form-field>
+    <mat-select placeholder="Coffee Type" name="type"
+        [(ngModel)]="coffee.type">
+      <mat-option *ngFor="let type of types" [value]="type">
+        {{ type }}
+      </mat-option>
+    </mat-select>
+  </mat-card>
     
+  <mat-card>
     <mat-form-field>
         <input matInput placeholder="Place Name"
                name="place" [(ngModel)]="coffee.place">
     </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Address"
+               name="address" [(ngModel)]="coffee.location.address">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="city"
+               name="acity" [(ngModel)]="coffee.location.city">
+    </mat-form-field>
+  </mat-card>
     
-    <mat-select placeholder="Coffee Type" name="type"
-               [(ngModel)]="coffee.type">
-        <mat-option *ngFor="let type of types" [value]="type">
-          {{ type }}
-        </mat-option>
-    </mat-select>
-    
+  <mat-card>
     <mat-form-field>
         <textarea matInput placeholder="Notes"
                name="notes" [(ngModel)]="coffee.notes">
         </textarea>
     </mat-form-field>
+  </mat-card>
 
     <mat-card>
       {{coffee | json}}
