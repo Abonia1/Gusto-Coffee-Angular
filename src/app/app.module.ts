@@ -11,6 +11,8 @@ import 'hammerjs';
 import { ListComponent } from './list/list.component';
 import { CoffeeComponent } from './coffee/coffee.component';
 import{Routes,RouterModule} from "@angular/router";
+
+import {FormsModule} from "@angular/forms";
 const routes:Routes=[
   { path: '', component: ListComponent },
   { path: 'coffee', component: CoffeeComponent },
@@ -25,6 +27,7 @@ const routes:Routes=[
   ],
   imports: [
     RouterModule.forRoot(routes),
+    FormsModule,
     BrowserModule, BrowserAnimationsModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
     MatToolbarModule, MatCardModule, MatSlideToggleModule
