@@ -32,7 +32,7 @@ export class ListComponent implements OnInit {
   share(coffee:Coffee){
     const shareText=`i had this coffee at ${coffee.place} and for me its a ${coffee.rating} star`
     if('share' in navigator){
-      navigator.share({
+     (navigator as any).share({
         title:coffee.name,
         text:shareText,
         url:window.location.href
