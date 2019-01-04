@@ -44,7 +44,7 @@
         [(ngModel)]="coffee.rating" tickInterval="1"></mat-slider>
 
       <mat-card-subtitle>
-        <mat-slide-toggle #tastingSelector
+        <mat-slide-toggle #tastingSelector [checked]="tastingEnabled"
         (change)="tastingRatingChanged(tastingSelector.checked)">Tasting Ratings</mat-slide-toggle>
       </mat-card-subtitle>
       <section id="tasting" *ngIf="tastingSelector.checked">

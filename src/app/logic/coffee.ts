@@ -5,6 +5,7 @@ import { PlaceLocation } from "./PlaceLocation";
 export class Coffee
 {
     //properties
+    _id:string;
     type:string;
     rating:number;
     notes:string;

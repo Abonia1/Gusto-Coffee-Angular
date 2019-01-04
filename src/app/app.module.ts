@@ -13,6 +13,7 @@ import { CoffeeComponent } from './coffee/coffee.component';
 import{Routes,RouterModule} from "@angular/router";
 
 import {FormsModule} from "@angular/forms";
+import {HttpModule} from "@angular/http";
 const routes:Routes=[
   { path: '', component: ListComponent },
   { path: 'coffee', component: CoffeeComponent },
@@ -27,7 +28,7 @@ const routes:Routes=[
   ],
   imports: [
     RouterModule.forRoot(routes),
-    FormsModule,
+    FormsModule,HttpModule,
     BrowserModule, BrowserAnimationsModule,
     MatButtonModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
     MatToolbarModule, MatCardModule, MatSlideToggleModule
